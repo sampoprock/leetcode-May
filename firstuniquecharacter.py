@@ -12,13 +12,13 @@
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        diction={}
+        dictionary={}
         for i in range(len(s)):
-            if s[i] not in diction:
-                diction[s[i]]=1
+            if s[i] not in dictionary:
+                dictionary[s[i]]=1
             else:
-                diction[s[i]]=-1
+                dictionary[s[i]]=-1
         for i in range(len(s)):
-            if diction[s[i]]==1:
+            if dictionary[s[i]]==1:
                 return i
         return -1
